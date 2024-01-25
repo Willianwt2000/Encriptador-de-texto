@@ -217,17 +217,20 @@ textarea,
     display: none;
   }
 
- /* body {
+  /* body {
     background: url(../img/hacker-removebg-preview.png) no-repeat center center fixed;
     background-size: cover;
   }*/
 
   main {
-    width: 100%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .container {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -236,7 +239,7 @@ textarea,
   }
 
   .encriptar {
-    width: 70vw;
+    width: 80vw;
     height: 200px;
   }
 
@@ -246,7 +249,18 @@ textarea,
   }
 
   .exterminator {
-    width: 20px;
+    width: 10px;
+  }
+
+  .leyenda {
+    font-size: 12px;
+  }
+
+  #resultado {
+    font-size: 1.1em;
+    color: #fff;
+    padding: 0;
+    margin: 0;
   }
 
   .advertenciaGroup {
@@ -254,13 +268,13 @@ textarea,
     top: -385px;
   }
 
-  .btns { 
+  .btns {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
 
-   
+
   }
 
   button {
@@ -285,18 +299,18 @@ textarea,
     width: 100%;
     justify-content: center;
     align-items: center;
-    padding: 21px 0 0;
-}
+    padding: 22px 0 0;
+  }
 
-.nav {
-  display: flex;
-  width: 265px;
-  flex-wrap: wrap;
-  padding: 0;
-  gap: 27px;
-  justify-content: center;
-  padding: 6px;
-}
+  .nav {
+    display: flex;
+    width: 265px;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 27px;
+    justify-content: center;
+    padding: 6px;
+  }
 
 
 }
@@ -353,7 +367,7 @@ textarea,
   padding: 23px 0 0 11px;
   gap: 0;
   justify-content: center;
-} 
+}
 
 
 .logo-footer {
