@@ -215,13 +215,17 @@ body.dark-mode .header i {
     gap: 20px;
   }
 
+  .dark-mode .advertenciaGroup {
+    position: relative;
+    top: -385px;
+  }
   .dark-mode .encriptar {
-    width: 80vw;
-    height: 200px;
+    width: 60vw;
+    height: 150px;
   }
 
   .dark-mode .desencriptar {
-    width: 80vw;
+    width: 70vw;
     height: 300px;
   }
 
@@ -229,10 +233,11 @@ body.dark-mode .header i {
     width: 200px;
   }
 
-  .dark-mode #leyenda {
+  /* .dark-mode #leyenda {
     font-size: 12px;
+    text-align: center;
     color: #fff;
-  }
+  } */
 
   .dark-mode button {
     width: 110px;
@@ -258,6 +263,7 @@ body.dark-mode .header i {
 
   .dark-mode #resultado {
     font-size: 1.1em;
+    text-align: center;
     color: #fff;
     padding: 0;
     margin: 0;
@@ -287,13 +293,13 @@ body.dark-mode .header i {
   align-items: center;
 }
 
-.dark-mode #leyenda {
+/* .dark-mode #leyenda {
   font-size: 14px;
   color: #fff;
-}
+} */
 
 .dark-mode #resultado {
-  font-size: 1.3em;
+  font-size: 1.1em;
   color: #fff;
   font-weight: bold;
   padding: 0;
