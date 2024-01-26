@@ -1,105 +1,48 @@
-:root {
-  --primario: rgb(8, 22, 59);
-  --secundario: #1d1d1d;
-  --tercercolor: #f5f5f5;
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #fff;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Source Code Pro', monospace;
-  transition: background-color 2s;
-  -webkit-transition: background-color 2s;
-  -moz-transition: background-color 2s;
-  -ms-transition: background-color 2s;
-  -o-transition: background-color 2s;
-}
-
-body {
-  margin: 0;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  background-color: #f5f5f5;
-}
-
-
-/* Estilo para el header */
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  position: fixed;
-}
-
-/*light*/
-
-
-.light i {
-  color: #000;
+body.dark-mode .header i {
+  color: #fff;
   font-size: 35px;
   transition: color 0.3s;
-  margin-top: 20px;
-
 }
 
-.light:hover i {
-  color: rgb(15, 170, 170);
 
-  transition: color 0.3s, text-shadow 0.3s;
+.body.dark-mode .header i {
+  color: #fff;
 }
 
-h1 {
-  color: var(--secundario);
+.body.dark-mode h1 {
+  color: red;
+}
+
+.body.dark-mode textarea,
+.body.dark-mode .desencriptar {
+  background-color: #1d1d1d;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 0 15px 7px aqua;
+}
+
+.dark-mode h1 {
+  color: red;
   font-size: 3rem;
   font-weight: bold;
   padding: 5px;
 }
 
-.extermidadorh1 {
-  width: 100px;
+.dark-mode .light:hover i {
+  text-shadow: 0 0 11px rgb(0, 255, 255), 0 0 20px rgb(0, 255, 255), 0 0 30px rgb(0, 255, 255);
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
-main {
-  width: 100%;
-  height: 800px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
-}
-
-
-p {
+.dark-mode p {
   color: #fff;
 }
 
-.container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.advertenciaGroup {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  text-align: center;
-  padding-top: 15px;
-  font-weight: bold;
-  font-size: 12px;
-  color: var(--secundario);
-}
-
-
-button {
+.dark-mode button {
   background-color: transparent;
   display: flex;
   justify-content: space-around;
@@ -112,50 +55,42 @@ button {
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.2s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
   font-weight: bold;
-  border-radius: 15px;
-  background: linear-gradient(to right, #074f6b, rgb(78, 78, 78));
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  transition: all 0.4s ease 0s;
+  background: linear-gradient(50deg, rgb(2, 0, 36) 0%, rgb(10, 77, 104) 50%, rgb(0, 212, 255) 100%);
 }
 
-button:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  transform: scale(1.05);
+.dark-mode button:hover {
+  box-shadow: 0 0 9px 6px aqua;
 }
 
-
-::placeholder {
-  color: #000;
+.dark-mode ::placeholder {
+  color: #fff;
 }
 
-textarea,
-.desencriptar {
+.dark-mode textarea,
+.dark-mode .desencriptar {
   display: flex;
   justify-content: center;
   font-size: 17px;
   padding: 10px;
   font-weight: bold;
   font-size: 15px;
-  color: #000;
+  color: #fff;
   width: 400px;
   height: 300px;
   font-family: 'Source Code Pro', monospace, sans-serif;
-  border: 3px solid #000;
+  border: 2px solid #fff;
   backdrop-filter: blur(190px) saturate(190%);
   -webkit-backdrop-filter: blur(18px) saturate(190%);
+  background-color: #1d1d1d;
   border-radius: 16px;
+  box-shadow: 0 0 12px 6px #00ffff;
   margin: 20px;
   resize: none;
-
 }
-
-.advice {
-  font-size: 15px;
-  color: #000;
-  font-weight: 500;
-}
-
 
 .logo-footer {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(6deg) brightness(101%) contrast(104%) drop-shadow(0 0 15px);
@@ -167,24 +102,32 @@ textarea,
   transform: scale(1.5);
 }
 
-.copy {
-  color: aqua;
-}
 
-.nav {
-  display: flex;
-  width: 265px;
-  flex-wrap: wrap;
+.dark-mode #resultado {
+  font-size: 1.1em;
+  color: #fff;
   padding: 0;
-  gap: 27px;
-  justify-content: center;
-  padding: 6px;
-
+  margin: 0;
 }
 
-.tooltip-box {
-  position: relative;
+.dark-mode .tooltip-info {
+  background-color: #1d1d1d;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 3px 6px;
+  border-radius: 5px;
+  position: fixed;
+  visibility: hidden;
+  font-size: 13px;
+  z-index: 10;
+}
 
+.footer {
+  display: flex;
+  height: auto;
+  align-items: center;
+  flex-direction: row;
+  background-color: var(--secundario);
 }
 
 .tooltip-info {
@@ -244,38 +187,26 @@ textarea,
   transform: scale(1.5);
 }
 
+
+
+
 @media (max-width: 768px) {
   h1 {
     display: none;
   }
 
-  .light {
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-  }
-
-  .light i {
-    color: #000;
-    font-size: 35px;
-    transition: color 0.3s;
-    margin-bottom: 20px;
-  }
-
-  main {
+  /* body {
+    background: url(../img/hacker-removebg-preview.png) no-repeat center center fixed;
+    background-size: cover;
+  }*/
+  .dark-mode main {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .header {
-    width: 100%;
-    height: auto;
-
-  }
-
-  .container {
+  .dark-mode .container {
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -284,85 +215,57 @@ textarea,
     gap: 20px;
   }
 
-  .encriptar {
+  .dark-mode .encriptar {
     width: 80vw;
     height: 200px;
   }
 
-  .desencriptar {
+  .dark-mode .desencriptar {
     width: 80vw;
     height: 300px;
   }
 
-  .exterminator {
+  .dark-mode .exterminator {
     width: 200px;
   }
 
-  .leyenda {
+  .dark-mode .leyenda {
     font-size: 12px;
-    color: #000;
+    color: #fff;
   }
 
-  #resultado {
-    font-size: 1.1em;
-    color: #000;
-    padding: 0;
-    margin: 0;
-  }
-
-  .advertenciaGroup {
-    position: relative;
-    top: -385px;
-  }
-
-  .btns {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-  }
-
-  button {
+  .dark-mode button {
     width: 110px;
     font-size: 11px;
     padding: 10px;
-    gap: 2px;
+
     user-select: none;
   }
 
 
-  #footer {
+  .dark-mode .light {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 0 35px;
+    align-items: flex-start;
   }
 
-  #footer .container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 22px 0 0;
+  .dark-mode .light i {
+    font-size: 25px;
+    transition: color 0.3s;
+    margin-bottom: 20px;
   }
 
-  .nav {
-    display: flex;
-    width: 265px;
-    flex-wrap: wrap;
+
+  .dark-mode #resultado {
+    font-size: 1.1em;
+    color: #fff;
     padding: 0;
-    gap: 27px;
-    justify-content: center;
-    padding: 6px;
+    margin: 0;
   }
 
 
 }
+
 
 
 .desencriptar {
@@ -373,7 +276,7 @@ textarea,
   gap: 10px;
 }
 
-.btns {
+.dark-mode .btns {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -386,12 +289,12 @@ textarea,
 
 .leyenda {
   font-size: 14px;
-  color: #000;
+  color: #fff;
 }
 
-#resultado {
+.dark-mode #resultado {
   font-size: 1.3em;
-  color: #000;
+  color: #fff;
   font-weight: bold;
   padding: 0;
   margin: 0;
@@ -431,46 +334,18 @@ img {
   padding: 0 35px;
 }
 
-.copy {
+.dark-mode .copy {
   font-size: 18px;
   padding: 0;
-  color: var(--tercercolor);
+  color: aqua;
   font-weight: bold;
   padding: 10px;
 }
 
-.nav {
-  display: flex;
-  width: 413px;
-  gap: 40px;
 
-}
-
-.nav a {
+.dark-mode .nav a {
   display: flex;
-  color: #000;
+  color: #fff;
   margin: 6px 0;
   cursor: pointer;
-}
-
-
-
-#github-span {
-  top: 82%;
-  left: 78%;
-}
-
-#alura-span {
-  top: 82%;
-  left: 81%;
-}
-
-#linkedin-span {
-  top: 82%;
-  left: 85%;
-}
-
-#udemy {
-  top: 82%;
-  left: 88%;
 }
