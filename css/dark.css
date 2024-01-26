@@ -229,7 +229,7 @@ body.dark-mode .header i {
     width: 200px;
   }
 
-  .dark-mode .leyenda {
+  .dark-mode #leyenda {
     font-size: 12px;
     color: #fff;
   }
@@ -287,7 +287,7 @@ body.dark-mode .header i {
   align-items: center;
 }
 
-.leyenda {
+.dark-mode #leyenda {
   font-size: 14px;
   color: #fff;
 }
