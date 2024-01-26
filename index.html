@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/light.css">
-  <link rel="stylesheet" href="./css/dark.css">
+   <link rel="stylesheet" href="./css/dark.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="shortcut icon" href="./img/exterminator-removebg.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,9 +37,13 @@
   <main>
     <div class="container">
       <textarea id="encriptar" class="encriptar" placeholder="Ingrese el texto"></textarea>
-      <div id="desencriptar" class="desencriptar">
-        <img class="exterminator" src="./img/exterminator-removebg.png" alt="exterminator">
-        <p id="resultado" class="resultado">Tu misión: cifrar y proteger. ¡Empieza escribiendo, soldado de la encriptación!</p>
+
+      <div id="msj-resultado" class="desencriptar">
+        <div class="imgloader"> 
+          <img class="exterminator" src="./img/exterminator-removebg.png" alt="exterminator">
+        </div>
+        <p id="resultado" class="resultado">Tu misión: cifrar y proteger. ¡Empieza escribiendo, soldado de la
+          encriptación!</p>
 
       </div>
     </div>
@@ -50,9 +54,9 @@
     </div>
 
     <div class="btns">
-      <button><i class="bi bi-lock"></i><span>Encriptar</span></button>
-      <button><i class="bi bi-unlock"></i><span>Desencriptar</span></button>
-      <button><i class="bi bi-copy"></i> <span>Copiar</span></button>
+      <button id="btnEncriptar"><i class="bi bi-lock"></i><span>Encriptar</span></button>
+      <button id="btnDesencriptar"><i class="bi bi-unlock"></i><span>Desencriptar</span></button>
+      <button id="btnCopiar"><i class="bi bi-copy"></i> <span>Copiar</span></button>
     </div>
 
   </main>
