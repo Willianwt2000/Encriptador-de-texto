@@ -1,5 +1,5 @@
 body.dark-mode {
-  background-color: #1a1a1a;
+  background-color: #1d1d1d;
   color: #fff;
 }
 
@@ -128,7 +128,7 @@ body.dark-mode .header i {
   z-index: 10;
 }
 
-.footer {
+.dark-mode .footer {
   display: flex;
   height: auto;
   align-items: center;
