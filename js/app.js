@@ -7,11 +7,16 @@ const imgExterminador = document.querySelector('.imgloader');
 
 const encriptarTexto = () => {
   try {
-    let texto = encriptar.value.trim().toLowerCase();
-    let contieneNumeros = /[^A-Za-z\s]/.test(texto);
+    let texto = encriptar.value.trim();
+    let contieneNumeros = /[^a-z\s]/.test(texto);
 
-    if (contieneNumeros) throw new Error('Texto de encriptación inválido.\n¡Ingresa algo digno de ser asegurado, humano!');
-    if (texto.trim() === '') throw new Error('¡No hay texto para encriptar!\nIngresa algo digno de ser asegurado.');
+    if (texto === '') {
+      throw new Error('¡No hay texto para encriptar!\nIngresa algo digno de ser asegurado.');
+    }
+
+    if (contieneNumeros || /[A-Z]/.test(texto)) {
+      throw new Error('Texto de encriptación inválido.\n¡Ingresa solo letras minúsculas sin números!');
+    }
 
     const textoEncriptado = texto.replace(/[aeiou]/gi, (frase) => {
       switch (frase) {
@@ -28,16 +33,19 @@ const encriptarTexto = () => {
       }
     });
 
-    // Establecer el texto encriptado como contenido del contenedor
+
     desEncriptarResult.textContent = textoEncriptado;
 
-    // Ocultar el contenido del contenedor
     imgExterminador.style.display = 'none';
 
   } catch (error) {
     alert(error.message);
   }
 }
+
+// Event listener para el botón de encriptar
+btnEncriptar.addEventListener('click', encriptarTexto);
+
 
 //Funcion desencriptar
 const desEncriptar = () =>  {
