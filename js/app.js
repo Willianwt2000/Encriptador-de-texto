@@ -89,4 +89,7 @@ btnCopiar.addEventListener('click', () => {
   document.execCommand('copy');
   seleccion.removeAllRanges();
   alert('Texto replicado y asegurado en el portapapeles. No escaparás: ');
+
+  //limbiar encriptar
+  encriptar.value = '';
 });
